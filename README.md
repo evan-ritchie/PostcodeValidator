@@ -6,7 +6,7 @@ Unit Tests
  
 Unit tests were written against the test cases.  Nine of the tests passed and six failed (as shown in below image):
 
-![alt text](https://github.com/evan-ritchie/PostcodeValidator/tree/master/PostcodeValidator/img/UnitTestResults.png "Logo Title Text 1")
+![alt tag](https://github.com/evan-ritchie/PostcodeValidator/tree/master/PostcodeValidator/img/UnitTestResults.png)
 
 
 
