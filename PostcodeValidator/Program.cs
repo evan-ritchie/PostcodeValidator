@@ -5,6 +5,7 @@ using System.IO.Compression;
 using System.Linq;
 using System.Text;
 
+
 namespace PostcodeValidator
 {
     class Program
@@ -74,6 +75,13 @@ namespace PostcodeValidator
             Console.WriteLine("Task started at " + DateTime.Now);
             Console.WriteLine("------------------------------------");
             Console.WriteLine("");
+
+            if (!File.Exists(directoryPath + filename + ".gz"))
+            {
+                Console.WriteLine("**** The file:  " + filename + " .gz is missing.  Please add this to the bin folder of your application.");
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
         }
 
         static void EndTask()
@@ -185,10 +193,6 @@ namespace PostcodeValidator
             //  Create list for failed postcodes
             List<Postcode> lstFailedPostcodes = new List<Postcode>();
 
-            if (!File.Exists(directoryPath + filename))
-            {
-                Console.WriteLine("**** The file:  " + filename + "is missing.  Please add this to the bin folder of your application.");
-            }
 
             //  stream the postcode file
             using (StreamReader reader = File.OpenText(directoryPath + filename))

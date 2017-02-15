@@ -1,21 +1,11 @@
 # Postcode Validation Task #
 
-
-Unit Tests
-----------
- 
-Unit tests were written against the test cases.  Nine of the tests passed and six failed (as shown in below image):
-
-![alt tag](https://github.com/evan-ritchie/PostcodeValidator/blob/master/PostcodeValidator/img/UnitTestResults.png)
-
-
-
-
 Running the Solution
 --------------------
 
 To run the solution:
 
+* Download the [import_data.csv.gz](https://drive.google.com/file/d/0BwxZ38NLOGvoTFE4X19VVGJ5NEk/view?usp=sharing) from GoogleDrive
 * Create a new directory, "c:\code\imports"
 * Copy the .exe file from your email to your desktop (or any local directory)
 * Double click the .exe to run the program.  This will:
