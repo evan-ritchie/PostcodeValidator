@@ -8,7 +8,7 @@ To run the solution:
 * Download the solution from github
 * Open in Visual Studio and build
 * Download the [import_data.csv.gz](https://drive.google.com/file/d/0BwxZ38NLOGvoTFE4X19VVGJ5NEk/view?usp=sharing) from GoogleDrive
-* Add the downloaded file to the bin directory at the root of your solution
+* Add the downloaded file to the bin/[debug/release] directory at the root of your solution
 * Run the solution by pressing CTRL + F5
 * Review outputs in console window
-* Completed files (succeeded_validation.csv and failed_validation.csv) will be found in the bin directory at the root of your solution
+* Completed files (succeeded_validation.csv and failed_validation.csv) will be found in the bin/[debug/release] directory at the root of your solution
