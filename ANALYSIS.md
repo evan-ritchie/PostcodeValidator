@@ -3,26 +3,13 @@
 
 Unit Tests
 ----------
- 
-Unit tests were written against the test cases.  Nine of the tests passed and six failed (as shown in below image):
+
+Unit tests were written against the test cases.  Nine of the tests passed and six failed (as shown in below image) which highlights the fact that the regex does not validate **ALL** UK postcode edge cases:
 
 ![alt tag](https://github.com/evan-ritchie/PostcodeValidator/blob/master/PostcodeValidator/img/UnitTestResults.png)
 
 
-
-
-Running the Solution
---------------------
-
-To run the solution:
-
-* Create a new directory, "c:\code\imports"
-* Copy the .exe file from your email to your desktop (or any local directory)
-* Double click the .exe to run the program.  This will:
-  - Untar the import_data.csv.gz (downloaded from GoogleDrive)
-  - Process all the records creating the following 2 files in c:code\imports:
-   - succeeded_validation.csv
-   - failed_validation.csv
-  - The files will be sorted by RowId (Ascending)
-
-to c:\Code\ConsoleApps\PostcodeValidator
+Other Analysis
+--------------
+The total time to unzip, process and populate the files was XX:XX
+The unit tests which covered all of the edge cases ran in XX:XX
