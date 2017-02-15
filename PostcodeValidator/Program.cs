@@ -25,31 +25,19 @@ namespace PostcodeValidator
             List<Postcode> lstFailedPostcodesSorted = null;
 
 
-            //  ----------
-            //  Start Task
-            //  ----------
-            Console.WriteLine("Task started at " + DateTime.Now);
-            Console.WriteLine("------------------------------------");
-            Console.WriteLine("");
-
+            //  Begin Task
+            BeginTask();
 
 
             //  --------------------------------------
             //  Part 1 - Unit Tests in PostcodeTest.cs
             //  --------------------------------------
-            Console.WriteLine("1a.  Postcode validation Unit tests passed with the following exceptions:");
-            Console.WriteLine("     - ValidatePostcode_AreaWithOnlySingleDigitDistricts_False");
-            Console.WriteLine("     - ValidatePostcode_CInFourthPosition_False");
-            Console.WriteLine("     - ValidatePostcode_IInSecondPosition_False");
-            Console.WriteLine("     - ValidatePostcode_JInSecondPosition_False");
-            Console.WriteLine("     - ValidatePostcode_OnlyDoubleDigitsAllowedInDistrict_False");
-            Console.WriteLine("     - ValidatePostcode_ZInSecondPosition_False");
+            DisplayUnitTestResults();
 
 
-
-            //  --------------------
-            //  Part 2 - Bulk import
-            //  --------------------
+            //  ---------------------------------------------------
+            //  Parts 2 & 3 - Bulk Import & Performance Engineering
+            //  ---------------------------------------------------
 
             //  Decompress the .gz file
             DecompressGzFile();
@@ -75,6 +63,20 @@ namespace PostcodeValidator
             //  --------
             //  End Task
             //  -------- 
+            EndTask();
+
+        }
+
+
+        static void BeginTask()
+        {
+            Console.WriteLine("Task started at " + DateTime.Now);
+            Console.WriteLine("------------------------------------");
+            Console.WriteLine("");
+        }
+
+        static void EndTask()
+        {
             Console.WriteLine("");
             Console.WriteLine("Task complete at " + DateTime.Now);
             Console.WriteLine("-------------------------------------");
@@ -86,7 +88,18 @@ namespace PostcodeValidator
 
 
             Console.ReadKey();
+        }
 
+        static void DisplayUnitTestResults()
+        {
+            //  Write unit test results to console
+            Console.WriteLine("1a.  Postcode validation Unit tests passed with the following exceptions:");
+            Console.WriteLine("     - ValidatePostcode_AreaWithOnlySingleDigitDistricts_False");
+            Console.WriteLine("     - ValidatePostcode_CInFourthPosition_False");
+            Console.WriteLine("     - ValidatePostcode_IInSecondPosition_False");
+            Console.WriteLine("     - ValidatePostcode_JInSecondPosition_False");
+            Console.WriteLine("     - ValidatePostcode_OnlyDoubleDigitsAllowedInDistrict_False");
+            Console.WriteLine("     - ValidatePostcode_ZInSecondPosition_False");
         }
 
 
