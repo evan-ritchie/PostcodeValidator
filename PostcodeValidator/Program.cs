@@ -9,7 +9,8 @@ namespace PostcodeValidator
 {
     class Program
     {
-        private static string directoryPath = @"c:\code\imports\";
+        //private static string directoryPath = @"c:\code\imports\";
+        private static string directoryPath = AppDomain.CurrentDomain.BaseDirectory;
         private static string filename = "import_data.csv";
         private static string filenameValidationErrors = "failed_validation.csv";
         private static string filenameValidationSuccesses = "succeeded_validation.csv";
@@ -184,6 +185,11 @@ namespace PostcodeValidator
             //  Create list for failed postcodes
             List<Postcode> lstFailedPostcodes = new List<Postcode>();
 
+            if (!File.Exists(directoryPath + filename))
+            {
+                Console.WriteLine("**** The file:  " + filename + "is missing.  Please add this to the bin folder of your application.");
+            }
+
             //  stream the postcode file
             using (StreamReader reader = File.OpenText(directoryPath + filename))
             {
@@ -221,7 +227,7 @@ namespace PostcodeValidator
             }
 
 
-            //  TODO:  Sort records by row ID
+            //  Sort records by row ID
             lstSuccessfulPostcodesSorted = lstSuccessfulPostcodes.OrderBy(o => o.RowId).ToList();
             lstFailedPostcodesSorted = lstFailedPostcodes.OrderBy(o => o.RowId).ToList();
         }
