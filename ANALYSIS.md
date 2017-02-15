@@ -11,6 +11,6 @@ Unit tests were written against the test cases.  Nine of the tests passed and si
 
 Other Analysis
 --------------
-The total time to unzip, process and populate the files was XX:XX
+The total time to unzip, process and populate the files was 10 seconds
 
-The unit tests which covered all of the edge cases ran in XX:XX
+The unit tests which covered all of the edge cases ran in 1 millisecond
