@@ -66,7 +66,9 @@ namespace PostcodeValidator
             if (!File.Exists(directoryPath + filename + ".gz"))
             {
                 //  import.gz file missing, write to console and exit
-                Console.WriteLine("**** The file:  " + filename + " .gz is missing.  Please add this to the bin folder of your application.");
+                Console.WriteLine("**** The file:  " + filename + " .gz is missing.  Please add this to the bin folder of your application and try again.");
+                Console.WriteLine("");
+                Console.Write("Press any key to exit....");
                 Console.ReadLine();
                 Environment.Exit(0);
             }
